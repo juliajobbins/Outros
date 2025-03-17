@@ -1,0 +1,11 @@
+import random
+import string
+
+print("Insira a quantidade de caracteres que desenha na senha: ")
+tamanho = int(input())
+def gerarsenha(tamanho):
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    senha = ''.join(random.choice(caracteres) for i in range(tamanho))
+    return senha
+
+print ("Senha gerada: ", gerarsenha(tamanho))
